@@ -1,0 +1,3 @@
+CREATE DATABASE gobackend;
+CREATE ROLE Benedict WITH LOGIN PASSWORD 'newpassword';
+GRANT ALL PRIVILEGES ON DATABASE gobackend TO Benedict;
