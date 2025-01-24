@@ -6,7 +6,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
 # Copy .env file
-COPY .env .env
+# COPY .env .env
 RUN go build -o app
 
 # Stage 2: Run the Go application
