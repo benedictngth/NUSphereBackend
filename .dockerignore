@@ -23,7 +23,7 @@
 **/go.work.sum
 
 # env file
-**/.env
+# **/.env
 
 **/host_pg_data/*
 fly.toml
