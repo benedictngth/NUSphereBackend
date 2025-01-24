@@ -10,15 +10,9 @@ COPY . .
 # Copy .env file
 # COPY .env .env
 
-RUN --mount=type=secret,id=env \
-    # 1) Make the secret file available
-    # 2) Export the variables so they're available in this RUN step
-    #    cat /run/secrets/env | xargs is a quick hack to turn KEY=val lines into env variables.
-    # 3) Do something with them (like install packages, private repo clone, etc.)
-    sh -c "export $(cat /run/secrets/env | xargs) && \
-    echo \"The DATABASE_URL is: $DATABASE_URL\" && \
-    echo \"The JWT KEY starts with: $JWT_SECRET\""
-
+ENV DATABASE_URL = ${DATABASE_URL}
+ENV JWT_SECRET = ${JWT_SECRET}
+ENV PORT = ${PORT}
 
 RUN go build -o app
 
