@@ -1,3 +1,4 @@
+#purely for go application
 # Stage 1: Build the Go application
 FROM golang:1.23 
 WORKDIR /app
