@@ -134,8 +134,10 @@ func LoginHandler(authService AuthService) gin.HandlerFunc {
 			}
 		}
 		log.Print("generated token string: ", token)
+		//sets sameSite to be none allows difference in domain
+		c.SetSameSite(http.SameSiteNoneMode)
 		//persist token in cookie for 24 hours
-		c.SetCookie("Authorisation", fmt.Sprintf("Bearer %v", token), 60*60*24, "/", "nuspherebackend.benedictngth.dev", false, true)
+		c.SetCookie("Authorisation", fmt.Sprintf("Bearer %v", token), 60*60*24, "/", "nuspherebackend.benedictngth.dev", true, true)
 		c.JSON(http.StatusOK, gin.H{"username": req.Username})
 	}
 }
