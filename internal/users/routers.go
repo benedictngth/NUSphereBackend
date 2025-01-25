@@ -135,7 +135,7 @@ func LoginHandler(authService AuthService) gin.HandlerFunc {
 		}
 		log.Print("generated token string: ", token)
 		//persist token in cookie for 24 hours
-		c.SetCookie("Authorisation", fmt.Sprintf("Bearer %v", token), 60*60*24, "/", "localhost", false, true)
+		c.SetCookie("Authorisation", fmt.Sprintf("Bearer %v", token), 60*60*24, "/", "nuspherebackend.benedictngth.dev", false, true)
 		c.JSON(http.StatusOK, gin.H{"username": req.Username})
 	}
 }
