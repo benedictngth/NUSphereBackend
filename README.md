@@ -65,21 +65,18 @@ Each database table follows a three-layer architecture:
    - Handles direct database operations
    - Implements CRUD operations
    - Uses pgx for database interactions
-   - Located in `/repository` directory
 
 2. **Service Layer**
 
    - Contains business logic
    - Validates data
    - Coordinates between repository and router
-   - Located in `/service` directory
 
 3. **Router Layer**
    - Manages HTTP endpoints
    - Handles request/response
    - Implements middleware
    - Uses Gin framework
-   - Located in `/router` directory
 
 Example structure for `users`:
 
