@@ -63,10 +63,12 @@ DATABASE_URL=postgresql://<username>:<password>@localhost:5432/<dbname>?sslmode=
  PORT=8080
 ```
 
-4. Start the server
+4. Runs server via Docker Compose at http://localhost:8080
+   - Update init-user-db.sql with postgres username and password
+   - Build and run entire server with Docker Compose
 
-```bash
-go run app.go
+```sh
+ docker-compose up -d
 ```
 
 ## Database Schema
