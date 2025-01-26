@@ -129,9 +129,12 @@ func LoginHandler(authService AuthService) gin.HandlerFunc {
 			switch err.Error() {
 			case INVALID_USERNAME_ERROR:
 				c.JSON(http.StatusUnauthorized, gin.H{"error": INVALID_USERNAME})
+				return
 			case INVALID_PASSWORD_ERROR:
 				c.JSON(http.StatusUnauthorized, gin.H{"error": INVALID_PASSWORD})
 				return
+			default:
+				c.JSON(http.StatusInternalServerError, gin.H{"error": LOGIN_FAILED})
 			}
 		}
 		log.Print("generated token string: ", token)
