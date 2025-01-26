@@ -1,9 +1,9 @@
 package categories
 
 import (
-	"NUSphereBackend/internal/common"
 	"context"
 	"fmt"
+	"github.com/benedictngth/NUSphereBackend/internal/common"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

@@ -43,7 +43,7 @@ services:
       - ./internal/db/migrations:/goBackend/internal/db/migrations #mount the migrations folder to the container
       - ./initdb:/initdb/init-user-db.sql # Mount initialization scripts
     ports:
-      - "8000:8000"
+      - "8080:8080"
     depends_on:
       db:
         condition: service_healthy

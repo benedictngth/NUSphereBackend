@@ -9,9 +9,9 @@ import (
 	"github.com/jackc/pgx/v5"
 
 	// "github.com/jackc/pgx/v5/pgxpool"
-	"NUSphereBackend/internal/categories"
-	"NUSphereBackend/internal/common"
-	"NUSphereBackend/internal/users"
+	"github.com/benedictngth/NUSphereBackend/internal/categories"
+	"github.com/benedictngth/NUSphereBackend/internal/common"
+	"github.com/benedictngth/NUSphereBackend/internal/users"
 )
 
 type PostRepository interface {

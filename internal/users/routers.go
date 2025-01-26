@@ -4,11 +4,12 @@ package users
 
 import (
 	// "errors"
-	"NUSphereBackend/internal/common"
 	"context"
 	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/benedictngth/NUSphereBackend/internal/common"
 
 	"github.com/gin-gonic/gin"
 )
@@ -53,7 +54,7 @@ func GetAuthHandler(authService AuthService) gin.HandlerFunc {
 func LogoutHandler(authService AuthService) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		c.SetSameSite(http.SameSiteNoneMode)
-		c.SetCookie("Authorisation", "", -1, "/", "nuspherebackend.benedictngth.dev", true, true)
+		c.SetCookie("Authorisation", "", -1, "/", "localhost", true, true)
 		c.JSON(http.StatusOK, gin.H{"message": LOGOUT_SUCCESS})
 	}
 }
@@ -138,7 +139,7 @@ func LoginHandler(authService AuthService) gin.HandlerFunc {
 		//sets sameSite to be none allows difference in domain
 		c.SetSameSite(http.SameSiteNoneMode)
 		//persist token in cookie for 24 hours
-		c.SetCookie("Authorisation", fmt.Sprintf("Bearer %v", token), 60*60*24, "/", "nuspherebackend.benedictngth.dev", true, true)
+		c.SetCookie("Authorisation", fmt.Sprintf("Bearer %v", token), 60*60*24, "/", "localhost", true, true)
 		c.JSON(http.StatusOK, gin.H{"username": req.Username})
 	}
 }

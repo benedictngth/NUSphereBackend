@@ -2,8 +2,8 @@ package comments
 
 import (
 	// "errors"
-	"NUSphereBackend/internal/common"
 	"context"
+	"github.com/benedictngth/NUSphereBackend/internal/common"
 	"net/http"
 	"time"
 

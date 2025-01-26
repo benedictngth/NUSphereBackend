@@ -9,9 +9,9 @@ import (
 
 	"github.com/jackc/pgx/v5"
 
-	"NUSphereBackend/internal/common"
-	"NUSphereBackend/internal/posts"
-	"NUSphereBackend/internal/users"
+	"github.com/benedictngth/NUSphereBackend/internal/common"
+	"github.com/benedictngth/NUSphereBackend/internal/posts"
+	"github.com/benedictngth/NUSphereBackend/internal/users"
 )
 
 type CommentRepository interface {

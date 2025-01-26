@@ -7,7 +7,7 @@ import (
 	"github.com/jackc/pgx/v5"
 
 	// "github.com/jackc/pgx/v5/pgxpool"
-	"NUSphereBackend/internal/common"
+	"github.com/benedictngth/NUSphereBackend/internal/common"
 )
 
 // User represents a user in the system

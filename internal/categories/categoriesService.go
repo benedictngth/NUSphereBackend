@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"NUSphereBackend/internal/common"
-	"NUSphereBackend/internal/users"
+	"github.com/benedictngth/NUSphereBackend/internal/common"
+	"github.com/benedictngth/NUSphereBackend/internal/users"
 
 	gonanoid "github.com/matoous/go-nanoid/v2"
 )

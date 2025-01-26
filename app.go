@@ -6,12 +6,12 @@ import (
 	"log"
 	"time"
 
-	"NUSphereBackend/internal/categories"
-	"NUSphereBackend/internal/comments"
-	"NUSphereBackend/internal/common"
-	"NUSphereBackend/internal/config"
-	"NUSphereBackend/internal/posts"
-	"NUSphereBackend/internal/users"
+	"github.com/benedictngth/NUSphereBackend/internal/categories"
+	"github.com/benedictngth/NUSphereBackend/internal/comments"
+	"github.com/benedictngth/NUSphereBackend/internal/common"
+	"github.com/benedictngth/NUSphereBackend/internal/config"
+	"github.com/benedictngth/NUSphereBackend/internal/posts"
+	"github.com/benedictngth/NUSphereBackend/internal/users"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"

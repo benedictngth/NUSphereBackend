@@ -5,7 +5,7 @@ import (
 	"errors"
 	"log"
 
-	"NUSphereBackend/internal/common"
+	"github.com/benedictngth/NUSphereBackend/internal/common"
 
 	gonanoid "github.com/matoous/go-nanoid/v2"
 )

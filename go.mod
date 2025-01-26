@@ -1,4 +1,4 @@
-module NUSphereBackend
+module github.com/benedictngth/NUSphereBackend
 
 go 1.23
 

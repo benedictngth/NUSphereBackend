@@ -1,10 +1,10 @@
 package categories
 
 import (
-	"NUSphereBackend/internal/common"
-	"NUSphereBackend/internal/users"
 	"context"
 	"fmt"
+	"github.com/benedictngth/NUSphereBackend/internal/common"
+	"github.com/benedictngth/NUSphereBackend/internal/users"
 
 	"github.com/jackc/pgx/v5"
 )

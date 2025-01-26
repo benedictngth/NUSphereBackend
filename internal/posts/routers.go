@@ -2,8 +2,8 @@ package posts
 
 import (
 	// "errors"
-	"NUSphereBackend/internal/common"
 	"context"
+	"github.com/benedictngth/NUSphereBackend/internal/common"
 	"log"
 	"net/http"
 	"time"
