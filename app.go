@@ -54,7 +54,8 @@ func main() {
 
 	//configure cors middleware
 	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:5173", "http://localhost:4173"},
+		//allow origins for npm run dev, npm run service and the deployed frontend
+		AllowOrigins:     []string{"http://localhost:5173", "http://localhost:4173", "https://www.nusphere.benedictngth.dev"},
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Authorisation"},
 		ExposeHeaders:    []string{"Content-Length"},
