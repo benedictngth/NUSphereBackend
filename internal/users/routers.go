@@ -52,7 +52,8 @@ func GetAuthHandler(authService AuthService) gin.HandlerFunc {
 
 func LogoutHandler(authService AuthService) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		c.SetCookie("Authorisation", "", -1, "/", "localhost", false, true)
+		c.SetSameSite(http.SameSiteNoneMode)
+		c.SetCookie("Authorisation", "", -1, "/", "nuspherebackend.benedictngth.dev", true, true)
 		c.JSON(http.StatusOK, gin.H{"message": LOGOUT_SUCCESS})
 	}
 }
