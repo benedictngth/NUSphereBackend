@@ -6,7 +6,6 @@ import (
 	"context"
 	"log"
 	"net/http"
-	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -21,7 +20,7 @@ func Posts(router *gin.RouterGroup, postsService PostsService) {
 
 func CreatePostHandler(postsService PostsService) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		time.Sleep(1 * time.Second)
+		// time.Sleep(1 * time.Second)
 		var req NewPostRequest
 		if err := c.ShouldBindJSON(&req); err != nil {
 			c.JSON(http.StatusBadRequest, gin.H{"error": common.INVALID_INPUT})
@@ -39,7 +38,7 @@ func CreatePostHandler(postsService PostsService) gin.HandlerFunc {
 
 func GetPostsHandler(postsService PostsService) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		time.Sleep(1 * time.Second)
+		// time.Sleep(1 * time.Second)
 		category := c.Query("category")
 		log.Printf("category: %s", category)
 		if category == "" {
@@ -71,7 +70,7 @@ func GetPostsHandler(postsService PostsService) gin.HandlerFunc {
 
 func GetPostByIDHandler(postsService PostsService) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		time.Sleep(1 * time.Second)
+		// time.Sleep(1 * time.Second)
 		publicID := c.Param("id")
 		//get category by public id
 		post, err := postsService.GetPostPublicByPublicID(context.Background(), publicID)
@@ -86,7 +85,7 @@ func GetPostByIDHandler(postsService PostsService) gin.HandlerFunc {
 
 func EditPostByPublicIDHandler(postsService PostsService) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		time.Sleep(1 * time.Second)
+		// time.Sleep(1 * time.Second)
 		publicID := c.Param("id")
 		var req EditPostRequest
 		if err := c.ShouldBindJSON(&req); err != nil {
@@ -109,7 +108,7 @@ func EditPostByPublicIDHandler(postsService PostsService) gin.HandlerFunc {
 
 func DeletePostByPublicIDHandler(postsService PostsService) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		time.Sleep(1 * time.Second)
+		// time.Sleep(1 * time.Second)
 		publicID := c.Param("id")
 		//delete post by public id
 		err := postsService.DeletePostByPublicID(context.Background(), publicID)

@@ -4,11 +4,32 @@
 
 Backend repository for NUSphere - a social networking platform for NUS students.
 
+## Features
+
+### Core Functionality
+
+- User authentication and authorisation
+- Profile management for NUS students
+- Post creation and management
+- Comment system
+- Category-based content organisation
+
+### Security
+
+- JWT-based authentication
+- Secure password hashing with bcrypt
+- HTTP-Only cookie implementation
+- Input validation
+
+### Scalability
+
+- Modular architecture
+- Containerized deployment
+
 ## Tech Stack
 
 - Golang with Go-Gin framework
 - pgx driver for PostgreSQL
-- Postgreql
 - JWT Authentication with Golang-jwt
 - HTTP-Only Cookies for secure token storage
 
